@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/xps-pduutGbL2-M-unsplash.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu_container{
+    width: 100%;
+    height: auto;
+}
+
+.menu{
+    width: 100%;
+    height: 150px;
+}
+
+.hamburger-menu{
+    position: fixed;
+    top: 30px;
+    right:3%;
+    width: 40px;
+    height: auto;
+    display: none;
+    z-index: 200;
+    padding: 5px;
+}
+.menu_items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    list-style: none;
+}
+
+.menu_link{
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.menu_item{
+    color: #33313b;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: .5px;
+}
+
+.menu_link:hover .menu_item{
+    color: #834c69;
+}
+
+.linkContact{
+    padding: 0;
+}
+
+.Contact{
+    background-color: #3c4f65;
+    color: #e6f5ff;
+    border-radius: 5%;
+    padding:20px;
+}
+
+.ContactButonResponsive{
+    background-color: #e6f5ff;
+    border-radius: 50%;
+    border: 5px solid #3c4f65;
+    padding:20px;
+    position: fixed;
+    right: 5%;
+    bottom: 3%;
+    cursor: pointer;
+    display: none;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    
+}
+
+.main-content{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+@media only screen  and (max-width: 900px){
+    .ContactButonResponsive{
+        display: block;
+    }
+
+    .Contact{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:600px)
+{
+    .hamburger-menu{
+        display: block;
+        background-color: #3c4f65;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .menu_items{
+        z-index: 100;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        transform: translate(0%,-100%);
+        background:#3c4f65;
+        margin: 0;
+        transition: transform .5s ease-out;
+    }
+
+    .menu-active{
+        transform: translate(0%,0%);
+    }
+
+}
